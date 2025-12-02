@@ -1,7 +1,6 @@
 
----
-
-> [!warning] **Disclaimer**  
+>[!warning] **Disclaimer**  
+>
 > I do not have formal training in programming, so this may not be the fastest or most efficient way of doing things. It's just the way I prefer to do things.
 ## What is this?
 In our lab, we use PCIbex to run production studies that collect audio data. If you use one of the PCIbex scripts I use, each participant produces a zip file containing multiple audio recordings in `.webm` format..
@@ -12,6 +11,7 @@ It is easier to process these files later if you preprocess the zip files first 
 ## Assumptions
 
 > [!tip] **Check before starting**  
+> 
 > Make sure you meet the following assumptions before continuing:
 
 - You are using macOS (if you are using Windows, you may need to adjust directory paths).
@@ -83,6 +83,7 @@ echo "All done."
 ```
 
 > [!tip] **Save location**  
+> 
 > Save this script in the same folder where your zip files are located.
 
 ---
@@ -102,10 +103,10 @@ bash batch_unzipper.sh
 ```
 
 > [!tip] **tip**  
+> 
 > The script will create a new `S#` folder with the next available number. Existing folders are not overwritten. Make sure any leftover test folders are numbered appropriately to avoid confusion.
 
 ---
-
 ### Step 3: Check the result
 
 If successful, you should see output like this:
@@ -118,4 +119,5 @@ Each `S#` folder now contains:
 - A `sound/` subfolder with all unzipped audio files
 
 > [!tip] **Next step**  
+> 
 > Check out [[Using automatic transcription to speed up sentence production data coding]] for a way to speed up your transcription using an automatic transcription software (whisper).
