@@ -1,6 +1,7 @@
+## Why this tutorial? Who is this for?
+One of the bottlenecks in studying sentence-level production is transcription. This tutorial aims to make this process as painless, fast, and accurate as possible using automatic transcription followed by human checking.
 
-## Why this tutorial?
-One of the bottlenecks in studying sentence-level production is transcription. This tutorial aims to make this process as painless, fast, and accurate as possible.
+This tutorial is intended to be useful for people who study sentence-level production (or researchers who need to transcribe a bunch of small audio files containing speech).
 ## Assumptions
 This tutorial is written with the following assumptions:
 - Audio recording of each trial is stored separately as individual sound files (here we assume `.mp3` format, though other file formats should work with minimal tweaks).
