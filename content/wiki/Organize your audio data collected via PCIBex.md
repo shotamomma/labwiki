@@ -15,7 +15,6 @@ It is easier to process these files later if you preprocess the zip files first 
 > Make sure you meet the following assumptions before continuing:
 
 - You are using macOS (if you are using Windows, you may need to adjust directory paths).
-- You know the very basics of Bash scripts (we will provide a simple example).    
 - You have zip files containing audio data collected via PCIbex. Each trial’s audio recording is stored as a separate sound file inside the zip file.
 
 ---
