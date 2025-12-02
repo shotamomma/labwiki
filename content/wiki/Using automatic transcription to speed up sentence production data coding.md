@@ -1,3 +1,5 @@
+
+## Why this tutorial?
 One of the bottlenecks in studying sentence-level production is transcription. This tutorial aims to make this process as painless, fast, and accurate as possible.
 ## Assumptions
 This tutorial is written with the following assumptions:
