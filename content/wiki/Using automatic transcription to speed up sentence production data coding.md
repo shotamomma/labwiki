@@ -5,7 +5,7 @@ This tutorial is written with the following assumptions:
 - You are using MacOS (if you are using another OS, you may need to modify the Bash scripts accordingly) and have Python installed.
 - You have already installed Homebrew ([https://brew.sh/](https://brew.sh/)).
 - Your sound files are organized in a specific way. To comply with this structure, create a folder for your project. Inside that folder, create a subfolder named `SX`, where `X` is the subject number (e.g., `S1`, `S2`, `S3`, etc.). All sound files associated with a subject must be inside the corresponding `SX` subfolder. For example (each `SX` folder should contain all sound files for that subject):
-![[example1.png]]
+![[images/example1.png]]
 ## Installing Whisper
 [Whisper](https://github.com/openai/whisper) is an automatic speech recognition software developed by OpenAI. Its outputs are not perfect and must be human-checked for scientific purposes. However, using Whisper and then reviewing the output is far faster than transcribing everything manually.
 
