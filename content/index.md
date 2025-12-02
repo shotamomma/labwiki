@@ -8,3 +8,9 @@ Lab members:
 - Shota Momma (PI)
 - TBA
 
+Collaborators:
+
+- Victor Ferriera (UCSD)
+- Utku Turk (UMD)
+- TBA
+

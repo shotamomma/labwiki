@@ -129,7 +129,6 @@ done
 
 Paste this code in Terminal. Make sure to define the `SUBJECTS` variable appropriately (e.g., if you want to batch-transcribe `S10`–`S15`, set `SUBJECTS="S10 S11 S12 S13 S14 S15"`). If you have many subjects, consider writing a script to automatically extract all `SX` folder names in a directory.
 
+## See also
 
-
-
-
+[[Organize your audio data collected via PCIBex]]
