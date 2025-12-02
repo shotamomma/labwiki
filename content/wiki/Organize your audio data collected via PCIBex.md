@@ -111,7 +111,7 @@ bash batch_unzipper.sh
 
 If successful, you should see output like this:
 
-![[Screenshot 2025-12-02 at 12.13.29 AM.png]]
+![[example2.png]]
 
 Each `S#` folder now contains:
 
