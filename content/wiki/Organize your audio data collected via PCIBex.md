@@ -2,7 +2,7 @@
 ---
 
 > [!warning] **Disclaimer**  
-> I do not have formal training in programming, so this may not be the fastest or most efficient way of doing things.
+> I do not have formal training in programming, so this may not be the fastest or most efficient way of doing things. It's just the way I prefer to do things.
 ## What is this?
 In our lab, we use PCIbex to run production studies that collect audio data. If you use one of the PCIbex scripts I use, each participant produces a zip file containing multiple audio recordings in `.webm` format.
 
@@ -31,7 +31,7 @@ The goal is to create a subfolder for each subject. Each subfolder should contai
 1. The original zip file    
 2. An unzipped `sound/` subfolder containing all audio files
 
-## Step 1: Save the batch unzip script
+### Step 1: Save the batch unzip script
 
 Save the following code as `batch_unzipper.sh` in your project folder:
 
@@ -88,7 +88,7 @@ echo "All done."
 
 ---
 
-## Step 2: Run the script
+### Step 2: Run the script
 
 1. Open Terminal and navigate to your project folder:
 
@@ -107,7 +107,7 @@ bash batch_unzipper.sh
 
 ---
 
-## Step 3: Check the result
+### Step 3: Check the result
 
 If successful, you should see output like this:
 
