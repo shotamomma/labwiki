@@ -1,11 +1,11 @@
 
 >[!warning] **Disclaimer**  
 >
-> I do not have formal training in programming, so this may not be the fastest or most efficient way of doing things. It's just the way I prefer to do things.
+> The author (Shota) do not have formal training in programming, so this may not be the fastest or most efficient way of doing things. It's just the way I prefer to do things.
 ## What is this?
-In our lab, we use PCIbex to run production studies that collect audio data. If you use one of the PCIbex scripts I use, each participant produces a zip file containing multiple audio recordings in `.webm` format..
+In our lab, we use PCIbex to run production studies that collect audio data. If you use one of the PCIbex scripts I use, each participant produces a zip file containing multiple audio recordings in `.webm` format.
 
-It is easier to process these files later if you preprocess the zip files first (see [[Using automatic transcription to speed up sentence production data coding]]). Manually performing this processing can be tedious. This article is meant to give you an idea of how to automate the process, with some basic explanations.
+It is easier to process these files later if you preprocess the zip files first (e.g., when [[Using automatic transcription to speed up sentence production data coding]]). Manually performing the pre-processing can be tedious. This article is meant to give you an idea of how to automate the process, with some basic explanations.
 
 ---
 ## Assumptions
@@ -34,7 +34,7 @@ The goal is to create a subfolder for each subject. Each subfolder should contai
 
 Save the following code as `batch_unzipper.sh` in your project folder:
 
-```
+```bash
 #!/usr/bin/env bash
 set -e
 shopt -s nullglob
@@ -84,7 +84,7 @@ echo "All done."
 
 > [!tip] **Save location**  
 > 
-> Save this script in the same folder where your zip files are located.
+> Save this script in the same folder where your zip files are located (or alternatively you can specify the full path when calling the script below).
 
 ---
 
@@ -92,13 +92,13 @@ echo "All done."
 
 1. Open Terminal and navigate to your project folder:
 
-```
+```bash
 cd PATH_TO_YOUR_PROJECT_FOLDER`
 ```
 
 2. Run the script:
 
-```
+```bash
 bash batch_unzipper.sh
 ```
 

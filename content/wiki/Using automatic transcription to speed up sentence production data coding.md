@@ -2,15 +2,27 @@
 One of the bottlenecks in studying sentence-level production is transcription. This tutorial aims to make this process as painless, fast, and accurate as possible using automatic transcription followed by human checking.
 
 This tutorial is intended to be useful for people who study sentence-level production (or researchers who need to transcribe a bunch of small audio files containing speech).
+
+---
 ## Assumptions
-This tutorial is written with the following assumptions:
-- Audio recording of each trial is stored separately as individual sound files (here we assume `.mp3` format, though other file formats should work with minimal tweaks).
-- You are using MacOS (if you are using another OS, you may need to modify the Bash scripts accordingly) and have Python installed.
-- You have already installed Homebrew ([https://brew.sh/](https://brew.sh/)).
-- Your sound files are organized in a specific way. To comply with this structure, create a folder for your project. Inside that folder, create a subfolder named `SX`, where `X` is the subject number (e.g., `S1`, `S2`, `S3`, etc.). All sound files associated with a subject must be inside the corresponding `SX` subfolder. For example (each `SX` folder should contain all sound files for that subject):
+
+> [!tip] **Check before starting**  
+>
+> Make sure you meet the following assumptions before continuing:
+1. Audio recording of each trial is stored separately as individual sound files (here we assume `.mp3` format, though other file formats should work with minimal tweaks).
+
+2. You are using MacOS (if you are using another OS, you may need to modify the Bash scripts accordingly) and have Python installed.
+
+3. You have already installed [Homebrew]([https://brew.sh/](https://brew.sh/)).
+
+4. Your sound files are organized in a specific way (see [[Organize your audio data collected via PCIBex]]). To comply with this structure, create a folder for your project. Inside that folder, create a subfolder named `SX`, where `X` is the subject number (e.g., `S1`, `S2`, `S3`, etc.). All sound files associated with a subject must be inside the corresponding `SX` subfolder. For example (each `SX` folder should contain all sound files for that subject):
+
 ![[images/example1.png]]
+
+---
 ## Installing Whisper
-[Whisper](https://github.com/openai/whisper) is an automatic speech recognition software developed by OpenAI. Its outputs are not perfect and must be human-checked for scientific purposes. However, using Whisper and then reviewing the output is far faster than transcribing everything manually.
+
+[Whisper](https://github.com/openai/whisper) is an automatic speech recognition tool developed by OpenAI. Its outputs are not perfect and should be reviewed by a human for scientific purposes. However, using Whisper and then checking the results is far faster than transcribing everything manually. Installing Whisper is straightforward, but I recommend that you consider using a package management environment such as [conda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html).
 
 ```
 pip install -U openai-whisper
@@ -22,10 +34,12 @@ Whisper requires ffmpeg, so you need to install it if you haven't done so.
 brew install ffmpeg
 ```
 
+---
 ## Running Whisper on all sound files in a specified folder (single subject data)
+
 Here's a Python script (assuming your sound files are `.mp3`; you can change `.mp3` to another format, like `.wav`, by adjusting the relevant part of the script). Save it as `folder_transcript.py` (without quotes):
 
-```
+```bash
 import os  
 import csv  
 import whisper  
@@ -83,7 +97,6 @@ def main():
   
 if __name__ == "__main__":  
     main()
-
 ```
 
 You need to pass three arguments to the script:
@@ -92,7 +105,7 @@ You need to pass three arguments to the script:
 - `MODEL_NAME`: Whisper model to use (`tiny`, `base`, `small`, `medium`, `large`, `turbo`). In my experience, `small` is sufficient since the transcription will be human-checked.
 
 Example usage in Terminal:
-```
+```bash
 # define your working directory - this folder must contain the transcribe_folder.py
 
 WD="YOUR_DIRECTORY" 
@@ -106,11 +119,13 @@ python transcribe_folder.py "$AUDIO_DIR" "$TRANSCRIPTION_LOC" "$MODEL"
 ```
 
 After running this script, the `S1` folder will contain a `transcription.csv` file with two columns: `filename` (which sound file corresponds to each transcription) and `transcript` (the transcription). You should listen to each audio file to verify the accuracy and correct any errors.
+
+---
 ## Processing data from multiple subjects at once
 
 Running the above script manually for each subject can be tedious. You can create a `for` loop to process multiple subjects in a batch:
 
-```
+```bash
 # List subjects here:  
 SUBJECTS="S1 S2 S3 S4 S5 S6"  
 WD="XXXX" # Replace XXX with the path to your project folder
@@ -129,6 +144,7 @@ done
 
 Paste this code in Terminal. Make sure to define the `SUBJECTS` variable appropriately (e.g., if you want to batch-transcribe `S10`–`S15`, set `SUBJECTS="S10 S11 S12 S13 S14 S15"`). If you have many subjects, consider writing a script to automatically extract all `SX` folder names in a directory.
 
-## See also
 
-[[Organize your audio data collected via PCIBex]]
+> [!tip] **See also**  
+> [[Organize your audio data collected via PCIBex]]
+
