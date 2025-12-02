@@ -4,7 +4,7 @@
 > [!warning] **Disclaimer**  
 > I do not have formal training in programming, so this may not be the fastest or most efficient way of doing things. It's just the way I prefer to do things.
 ## What is this?
-In our lab, we use PCIbex to run production studies that collect audio data. If you use one of the PCIbex scripts I use, each participant produces a zip file containing multiple audio recordings in `.webm` format.
+In our lab, we use PCIbex to run production studies that collect audio data. If you use one of the PCIbex scripts I use, each participant produces a zip file containing multiple audio recordings in `.webm` format..
 
 It is easier to process these files later if you preprocess the zip files first (see [[Using automatic transcription to speed up sentence production data coding]]). Manually performing this processing can be tedious. This article is meant to give you an idea of how to automate the process, with some basic explanations.
 
