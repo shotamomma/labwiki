@@ -119,4 +119,4 @@ Each `S#` folder now contains:
 - A `sound/` subfolder with all unzipped audio files
 
 > [!tip] **Next step**  
-> Check out [[Using automatic transcription to speed up sentence production data coding]] for speeding up your transcription.
+> Check out [[Using automatic transcription to speed up sentence production data coding]] for a way to speed up your transcription using an automatic transcription software (whisper).
